@@ -1,0 +1,17 @@
+<script>
+    let counter = 0
+    function increamentcounter() {
+        counter = counter + 1
+        renderstate(counter);
+    }
+    function renderstate(counter) {
+        console.log(counter)
+
+    }
+    setInterval(()=>{
+        increamentcounter()
+
+    },1000
+    )
+
+</script>
