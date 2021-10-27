@@ -1,11 +1,60 @@
-<script>
-    let sec=0
-    setInterval(() => {
-        sec=sec+1
-        console.log(sec)
-        if(sec==60){
-            console.log('min:1')
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title> Digital clock</title>
+    <style>
+        #clock {
+            font-size: 170px;
+            width: 850px;
+            margin: 200px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10px;
         }
-        
-    }, 1000);
-</script>
+    </style>
+</head>
+
+<body>
+    <div id="clock">1:10:10</div>
+
+    <script>
+        setInterval(showTime, 1000);
+        function showTime() {
+            let time = new Date();
+            let hour = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+            am_pm = "AM"
+
+            if(hour > 12){
+                hour -=12;
+                am_pm = "PM"
+            }
+            if (hour == 0){
+                hr = 12;
+                am_pm = "AM";
+            }
+
+
+            hour = hour < 10 ? "0" + hour : hour;
+            min = min < 10 ? "0" + min : min;
+            sec = sec < 10 ? "0" + sec : sec;
+
+            let currentTime = hour + ":" + min + ":" + sec + am_pm;
+
+            document.getElementById("clock")
+                .innerHTML = currentTime;
+
+        }
+
+        showTime();
+    </script>
+
+
+</body>
+
+</html>
