@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <style>
+            .box{
+                background-color: brown;
+                color: white;
+                font-size: 60px;
+                display: none;
+            }
+            @media(max-width:300px){
+                #item-1{
+                    display: block;
+                    background-color: tomato;
+                }
+
+            }
+            @media(max-width:500px){
+                #item-2{
+                    display: block;
+                    background-color: rgb(130, 150, 238);
+                }
+            }
+            @media(max-width:900px){
+                #item-3{
+                    display: block;
+                    background-color: rgb(0, 174, 255);
+                }
+            }
+            @media(min-width:901px){
+                #item-4{
+                    display: block;
+                    background-color: rgb(156, 21, 21);
+                }
+            }
+        </style>
+
+        <div class="box" id="item-1">im a mobile screen with starts 0 to 300px</div>
+        <div class="box" id="item-2">im a tab screen with starts 310 to 500px</div>
+        <div class="box" id="item-3">im a desktop screen with starts 501 to 900px</div>
+        <div class="box" id="item-4">im a mobile screen with starts 901px</div>
+        <script src="" async defer></script>
+    </body>
+</html>
