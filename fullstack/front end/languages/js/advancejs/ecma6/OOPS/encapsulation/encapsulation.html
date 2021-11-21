@@ -1,0 +1,36 @@
+<script>
+
+
+    function Userdata(name){
+        
+            this.name=name
+            this.emailid='shddhj@gmail.com'
+            this.mobileno='76788766'
+            this.salary=50000
+            let bonus=1000
+        
+
+this.checkBonous=()=>{
+
+    console.log(bonus)
+}
+
+this.checkSalary=()=>{
+    var tsasalry=this.salary+bonus
+
+    console.log(tsasalry)
+
+}
+
+
+
+    }
+
+    var emp1=new  Userdata('mohan')
+
+    console.log(emp1)
+    //emp1.checkSalary()
+    emp1.checkBonous()
+    console.log(emp1.bonus)
+   
+</script>
