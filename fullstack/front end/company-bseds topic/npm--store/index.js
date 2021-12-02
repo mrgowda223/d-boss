@@ -17,7 +17,7 @@ var mailoption={
     from:'mohan223b@gmail.com',
     to:'mohan223gowda@gmail.com',
     subject:'advance js topic',
-    Text:'mohan how r u,r u nderstanding this'
+    Text:'mohan how r u nderstanding this'
 }
 transporter.sendMail(mailoption,(err,info)=>{
     if(err) {
